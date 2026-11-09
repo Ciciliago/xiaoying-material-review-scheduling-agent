@@ -1,0 +1,25 @@
+{
+  "request_id": "REQ-CONFLICT-001",
+  "overall_status": "needs_confirmation",
+  "material_id": "M01",
+  "review_status": "passed",
+  "risk_reasons": [],
+  "warnings": [],
+  "missing_fields": [],
+  "requested_slot": {
+    "date": "2026-11-10",
+    "time": "18:00"
+  },
+  "suggested_slot": {
+    "date": "2026-11-10",
+    "time": "19:00"
+  },
+  "conflict_reason": "该时段已被素材 M02 占用",
+  "confirmation_required": true,
+  "confirmation_reason": "原请求时段冲突，替代时段需要用户批准。",
+  "draft_status": "saved",
+  "draft_id": "DRAFT-001",
+  "draft_error": null,
+  "publication_status": "not_published",
+  "message": "替代时段草稿已保存，等待用户确认。"
+}

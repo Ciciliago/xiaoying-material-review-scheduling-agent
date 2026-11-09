@@ -1,0 +1,38 @@
+{
+  "M01": {
+    "material_id": "M01",
+    "title": "新品介绍",
+    "body": "产品功能介绍文案。",
+    "source": "品牌资料库",
+    "owner": "content_team",
+    "duration_minutes": 60,
+    "required_fields": ["title", "body", "source", "duration_minutes"]
+  },
+  "M03": {
+    "material_id": "M03",
+    "title": "资料待补充素材",
+    "body": "",
+    "source": "",
+    "owner": "content_team",
+    "duration_minutes": 60,
+    "required_fields": ["title", "body", "source", "duration_minutes"]
+  },
+  "M04": {
+    "material_id": "M04",
+    "title": "需审核素材",
+    "body": "包含未经授权素材的推广文案。",
+    "source": "外部投稿",
+    "owner": "content_team",
+    "duration_minutes": 60,
+    "required_fields": ["title", "body", "source", "duration_minutes"]
+  },
+  "M05": {
+    "material_id": "M05",
+    "title": "限时活动提醒",
+    "body": "活动将在本周末结束。",
+    "source": "活动运营组",
+    "owner": "content_team",
+    "duration_minutes": 30,
+    "required_fields": ["title", "body", "source", "duration_minutes"]
+  }
+}

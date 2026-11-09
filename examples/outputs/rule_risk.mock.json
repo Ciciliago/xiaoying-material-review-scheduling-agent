@@ -1,0 +1,24 @@
+{
+  "request_id": "REQ-RISK-001",
+  "overall_status": "blocked",
+  "material_id": "M04",
+  "review_status": "blocked",
+  "risk_reasons": [
+    "未提供素材授权证明，违反硬性审核规则。"
+  ],
+  "warnings": [],
+  "missing_fields": [],
+  "requested_slot": {
+    "date": "2026-11-11",
+    "time": "18:00"
+  },
+  "suggested_slot": null,
+  "conflict_reason": null,
+  "confirmation_required": false,
+  "confirmation_reason": null,
+  "draft_status": "not_saved",
+  "draft_id": null,
+  "draft_error": null,
+  "publication_status": "not_published",
+  "message": "素材触发硬性审核规则，无法进入排期。"
+}

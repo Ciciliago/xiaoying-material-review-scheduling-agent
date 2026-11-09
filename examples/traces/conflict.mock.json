@@ -1,0 +1,135 @@
+{
+  "run_id": "009a4eab-62ee-4d67-b54a-ce38fcea01c1",
+  "timestamp": "2026-11-09T00:35:01.046345+00:00",
+  "mode": "mock",
+  "model": {
+    "name": "deterministic-mock",
+    "version": "1.0"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "action": "get_material",
+      "arguments": {
+        "material_id": "M01"
+      },
+      "observation": {
+        "status": "found",
+        "material": {
+          "material_id": "M01",
+          "title": "新品介绍",
+          "body": "产品功能介绍文案。",
+          "source": "品牌资料库",
+          "owner": "content_team",
+          "duration_minutes": 60,
+          "required_fields": [
+            "title",
+            "body",
+            "source",
+            "duration_minutes"
+          ]
+        }
+      },
+      "next_action": "check_rules",
+      "decision_summary": "先读取素材并确认元数据完整。"
+    },
+    {
+      "step": 2,
+      "action": "check_rules",
+      "arguments": {
+        "material_id": "M01"
+      },
+      "observation": {
+        "material_id": "M01",
+        "status": "passed",
+        "risks": [],
+        "warnings": []
+      },
+      "next_action": "query_slots",
+      "decision_summary": "素材完整，继续检查审核规则。"
+    },
+    {
+      "step": 3,
+      "action": "query_slots",
+      "arguments": {
+        "target_date": "2026-11-10",
+        "time": "18:00",
+        "duration_minutes": 60
+      },
+      "observation": {
+        "requested_slot": {
+          "date": "2026-11-10",
+          "time": "18:00"
+        },
+        "available": false,
+        "conflict_reason": "该时段已被素材 M02 占用",
+        "alternatives": [
+          {
+            "date": "2026-11-10",
+            "time": "19:00"
+          },
+          {
+            "date": "2026-11-10",
+            "time": "20:00"
+          }
+        ]
+      },
+      "next_action": "save_draft",
+      "decision_summary": "审核通过，查询用户要求的时段。"
+    },
+    {
+      "step": 4,
+      "action": "save_draft",
+      "arguments": {
+        "request_id": "REQ-CONFLICT-001",
+        "material_id": "M01",
+        "proposed_slot": {
+          "date": "2026-11-10",
+          "time": "19:00"
+        }
+      },
+      "observation": {
+        "success": true,
+        "draft_id": "DRAFT-001",
+        "created": true,
+        "status": "pending_confirmation"
+      },
+      "next_action": "finish",
+      "decision_summary": "原时段冲突，保存第一个已验证替代时段并等待确认。"
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "arguments": {},
+      "observation": "needs_confirmation",
+      "next_action": "end",
+      "decision_summary": "保存结果已返回，准确结束任务。"
+    }
+  ],
+  "final_status": "needs_confirmation",
+  "final_result": {
+    "request_id": "REQ-CONFLICT-001",
+    "overall_status": "needs_confirmation",
+    "material_id": "M01",
+    "review_status": "passed",
+    "risk_reasons": [],
+    "warnings": [],
+    "missing_fields": [],
+    "requested_slot": {
+      "date": "2026-11-10",
+      "time": "18:00"
+    },
+    "suggested_slot": {
+      "date": "2026-11-10",
+      "time": "19:00"
+    },
+    "conflict_reason": "该时段已被素材 M02 占用",
+    "confirmation_required": true,
+    "confirmation_reason": "原请求时段冲突，替代时段需要用户批准。",
+    "draft_status": "saved",
+    "draft_id": "DRAFT-001",
+    "draft_error": null,
+    "publication_status": "not_published",
+    "message": "替代时段草稿已保存，等待用户确认。"
+  }
+}

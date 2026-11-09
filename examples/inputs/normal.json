@@ -1,0 +1,9 @@
+{
+  "request_id": "REQ-NORMAL-001",
+  "material_id": "M01",
+  "target_date": "2026-11-11",
+  "requested_time": "18:00",
+  "time_constraint": "flexible",
+  "allow_alternative": true,
+  "user_note": "新品首发"
+}

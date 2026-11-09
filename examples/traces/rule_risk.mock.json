@@ -1,0 +1,87 @@
+{
+  "run_id": "2622a9db-a2f1-4f88-a571-0adaece13b78",
+  "timestamp": "2026-11-09T00:47:25.037705+00:00",
+  "mode": "mock",
+  "model": {
+    "name": "deterministic-mock",
+    "version": "1.0"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "action": "get_material",
+      "arguments": {
+        "material_id": "M04"
+      },
+      "observation": {
+        "status": "found",
+        "material": {
+          "material_id": "M04",
+          "title": "需审核素材",
+          "body": "包含未经授权素材的推广文案。",
+          "source": "外部投稿",
+          "owner": "content_team",
+          "duration_minutes": 60,
+          "required_fields": [
+            "title",
+            "body",
+            "source",
+            "duration_minutes"
+          ]
+        }
+      },
+      "next_action": "check_rules",
+      "decision_summary": "先读取素材并确认元数据完整。"
+    },
+    {
+      "step": 2,
+      "action": "check_rules",
+      "arguments": {
+        "material_id": "M04"
+      },
+      "observation": {
+        "material_id": "M04",
+        "status": "blocked",
+        "risks": [
+          "未提供素材授权证明，违反硬性审核规则。"
+        ],
+        "warnings": []
+      },
+      "next_action": "finish",
+      "decision_summary": "素材完整，继续检查审核规则。"
+    },
+    {
+      "step": 3,
+      "action": "finish",
+      "arguments": {},
+      "observation": "blocked",
+      "next_action": "end",
+      "decision_summary": "规则阻断，不能进入排期。"
+    }
+  ],
+  "final_status": "blocked",
+  "final_result": {
+    "request_id": "REQ-RISK-001",
+    "overall_status": "blocked",
+    "material_id": "M04",
+    "review_status": "blocked",
+    "risk_reasons": [
+      "未提供素材授权证明，违反硬性审核规则。"
+    ],
+    "warnings": [],
+    "missing_fields": [],
+    "requested_slot": {
+      "date": "2026-11-11",
+      "time": "18:00"
+    },
+    "suggested_slot": null,
+    "conflict_reason": null,
+    "confirmation_required": false,
+    "confirmation_reason": null,
+    "draft_status": "not_saved",
+    "draft_id": null,
+    "draft_error": null,
+    "publication_status": "not_published",
+    "message": "素材触发硬性审核规则，无法进入排期。"
+  }
+}

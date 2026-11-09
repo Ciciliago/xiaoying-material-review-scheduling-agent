@@ -1,0 +1,25 @@
+{
+  "request_id": "REQ-IDEMPOTENCY-001",
+  "overall_status": "completed",
+  "material_id": "M01",
+  "review_status": "passed",
+  "risk_reasons": [],
+  "warnings": [],
+  "missing_fields": [],
+  "requested_slot": {
+    "date": "2026-11-12",
+    "time": "18:00"
+  },
+  "suggested_slot": {
+    "date": "2026-11-12",
+    "time": "18:00"
+  },
+  "conflict_reason": null,
+  "confirmation_required": false,
+  "confirmation_reason": null,
+  "draft_status": "saved",
+  "draft_id": "DRAFT-001",
+  "draft_error": null,
+  "publication_status": "not_published",
+  "message": "排期草稿已保存。"
+}

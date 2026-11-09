@@ -1,0 +1,62 @@
+{
+  "run_id": "f8eb914d-8400-45a4-9390-5f2dc5bb2f89",
+  "timestamp": "2026-11-09T00:35:06.207838+00:00",
+  "mode": "mock",
+  "model": {
+    "name": "deterministic-mock",
+    "version": "1.0"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "action": "get_material",
+      "arguments": {
+        "material_id": "M03"
+      },
+      "observation": {
+        "status": "needs_info",
+        "material_id": "M03",
+        "missing_fields": [
+          "body",
+          "source"
+        ]
+      },
+      "next_action": "finish",
+      "decision_summary": "先读取素材并确认元数据完整。"
+    },
+    {
+      "step": 2,
+      "action": "finish",
+      "arguments": {},
+      "observation": "blocked",
+      "next_action": "end",
+      "decision_summary": "素材不存在或信息不完整，停止排期。"
+    }
+  ],
+  "final_status": "blocked",
+  "final_result": {
+    "request_id": "REQ-MISSING-001",
+    "overall_status": "blocked",
+    "material_id": "M03",
+    "review_status": "needs_info",
+    "risk_reasons": [],
+    "warnings": [],
+    "missing_fields": [
+      "body",
+      "source"
+    ],
+    "requested_slot": {
+      "date": "2026-11-11",
+      "time": "18:00"
+    },
+    "suggested_slot": null,
+    "conflict_reason": null,
+    "confirmation_required": false,
+    "confirmation_reason": null,
+    "draft_status": "not_saved",
+    "draft_id": null,
+    "draft_error": null,
+    "publication_status": "not_published",
+    "message": "素材必要信息不完整，请补充后重试。"
+  }
+}

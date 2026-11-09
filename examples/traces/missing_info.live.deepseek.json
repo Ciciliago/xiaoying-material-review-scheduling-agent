@@ -1,0 +1,47 @@
+{
+  "run_id": "ff9e215a-d1da-4e5d-9563-9f8e7debfad2",
+  "timestamp": "2026-11-09T00:43:22.801452+00:00",
+  "mode": "live",
+  "model": {
+    "name": "openai-compatible",
+    "version": "deepseek-flash"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "action": "get_material",
+      "arguments": {"material_id": "M03"},
+      "observation": {"status": "needs_info", "material_id": "M03", "missing_fields": ["body", "source"]},
+      "next_action": "finish",
+      "decision_summary": "模型根据最新工具结果选择该动作。"
+    },
+    {
+      "step": 2,
+      "action": "finish",
+      "arguments": {},
+      "observation": "blocked",
+      "next_action": "end",
+      "decision_summary": "FINISH: 素材 M03 状态为 needs_info，缺失 body 与 source 必填字段，无法进行硬性规则校验与时段排期，已终止流程（未创建草稿、未发布）。需补充素材正文与来源后重新提交。"
+    }
+  ],
+  "final_status": "blocked",
+  "final_result": {
+    "request_id": "REQ-MISSING-001",
+    "overall_status": "blocked",
+    "material_id": "M03",
+    "review_status": "needs_info",
+    "risk_reasons": [],
+    "warnings": [],
+    "missing_fields": ["body", "source"],
+    "requested_slot": {"date": "2026-11-11", "time": "18:00"},
+    "suggested_slot": null,
+    "conflict_reason": null,
+    "confirmation_required": false,
+    "confirmation_reason": null,
+    "draft_status": "not_saved",
+    "draft_id": null,
+    "draft_error": null,
+    "publication_status": "not_published",
+    "message": "素材必要信息不完整，请补充后重试。"
+  }
+}

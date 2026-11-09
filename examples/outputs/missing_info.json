@@ -1,0 +1,25 @@
+{
+  "request_id": "REQ-MISSING-001",
+  "overall_status": "blocked",
+  "material_id": "M03",
+  "review_status": "needs_info",
+  "risk_reasons": [],
+  "warnings": [],
+  "missing_fields": [
+    "body",
+    "source"
+  ],
+  "requested_slot": {
+    "date": "2026-11-11",
+    "time": "18:00"
+  },
+  "suggested_slot": null,
+  "conflict_reason": null,
+  "confirmation_required": false,
+  "confirmation_reason": null,
+  "draft_status": "not_saved",
+  "draft_id": null,
+  "draft_error": null,
+  "publication_status": "not_published",
+  "message": "素材必要信息不完整，请补充后重试。"
+}

@@ -1,0 +1,35 @@
+{
+  "drafts": [
+    {
+      "confirmation_required": true,
+      "draft_id": "DRAFT-001",
+      "material_id": "M01",
+      "original_request": {
+        "allow_alternative": true,
+        "material_id": "M01",
+        "request_id": "REQ-CONFLICT-001",
+        "requested_time": "18:00",
+        "target_date": "2026-11-10",
+        "time_constraint": "flexible",
+        "user_note": "如冲突可建议替代时段"
+      },
+      "request_hash": "2ad6fea23b59608866ae4e2597809750c19d8acfc06678d4021905549b55b856",
+      "request_id": "REQ-CONFLICT-001",
+      "requested_slot": {
+        "date": "2026-11-10",
+        "time": "18:00"
+      },
+      "status": "pending_confirmation",
+      "suggested_slot": {
+        "date": "2026-11-10",
+        "time": "19:00"
+      }
+    }
+  ],
+  "request_index": {
+    "REQ-CONFLICT-001": {
+      "draft_id": "DRAFT-001",
+      "request_hash": "2ad6fea23b59608866ae4e2597809750c19d8acfc06678d4021905549b55b856"
+    }
+  }
+}

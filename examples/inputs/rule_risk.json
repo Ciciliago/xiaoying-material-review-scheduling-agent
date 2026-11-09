@@ -1,0 +1,9 @@
+{
+  "request_id": "REQ-RISK-001",
+  "material_id": "M04",
+  "target_date": "2026-11-11",
+  "requested_time": "18:00",
+  "time_constraint": "flexible",
+  "allow_alternative": true,
+  "user_note": "审核通过后再安排发布"
+}

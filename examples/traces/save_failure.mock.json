@@ -1,0 +1,125 @@
+{
+  "run_id": "5d6abb37-070b-4d5c-8256-9f972a089a5d",
+  "timestamp": "2026-11-09T00:35:11.802187+00:00",
+  "mode": "mock",
+  "model": {
+    "name": "deterministic-mock",
+    "version": "1.0"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "action": "get_material",
+      "arguments": {
+        "material_id": "M01"
+      },
+      "observation": {
+        "status": "found",
+        "material": {
+          "material_id": "M01",
+          "title": "新品介绍",
+          "body": "产品功能介绍文案。",
+          "source": "品牌资料库",
+          "owner": "content_team",
+          "duration_minutes": 60,
+          "required_fields": [
+            "title",
+            "body",
+            "source",
+            "duration_minutes"
+          ]
+        }
+      },
+      "next_action": "check_rules",
+      "decision_summary": "先读取素材并确认元数据完整。"
+    },
+    {
+      "step": 2,
+      "action": "check_rules",
+      "arguments": {
+        "material_id": "M01"
+      },
+      "observation": {
+        "material_id": "M01",
+        "status": "passed",
+        "risks": [],
+        "warnings": []
+      },
+      "next_action": "query_slots",
+      "decision_summary": "素材完整，继续检查审核规则。"
+    },
+    {
+      "step": 3,
+      "action": "query_slots",
+      "arguments": {
+        "target_date": "2026-11-12",
+        "time": "18:00",
+        "duration_minutes": 60
+      },
+      "observation": {
+        "requested_slot": {
+          "date": "2026-11-12",
+          "time": "18:00"
+        },
+        "available": true,
+        "conflict_reason": null,
+        "alternatives": []
+      },
+      "next_action": "save_draft",
+      "decision_summary": "审核通过，查询用户要求的时段。"
+    },
+    {
+      "step": 4,
+      "action": "save_draft",
+      "arguments": {
+        "request_id": "REQ-FAIL-001",
+        "material_id": "M01",
+        "proposed_slot": {
+          "date": "2026-11-12",
+          "time": "18:00"
+        }
+      },
+      "observation": {
+        "success": false,
+        "error": "simulated_save_failure",
+        "created": false
+      },
+      "next_action": "finish",
+      "decision_summary": "原时段可用，保存草稿。"
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "arguments": {},
+      "observation": "failed",
+      "next_action": "end",
+      "decision_summary": "保存结果已返回，准确结束任务。"
+    }
+  ],
+  "final_status": "failed",
+  "final_result": {
+    "request_id": "REQ-FAIL-001",
+    "overall_status": "failed",
+    "material_id": "M01",
+    "review_status": "passed",
+    "risk_reasons": [],
+    "warnings": [],
+    "missing_fields": [],
+    "requested_slot": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "suggested_slot": {
+      "date": "2026-11-12",
+      "time": "18:00"
+    },
+    "conflict_reason": null,
+    "confirmation_required": false,
+    "confirmation_reason": null,
+    "draft_status": "save_failed",
+    "draft_id": null,
+    "draft_error": "simulated_save_failure",
+    "publication_status": "not_published",
+    "message": "草稿保存失败，请稍后重试。"
+  }
+}

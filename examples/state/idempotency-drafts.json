@@ -1,0 +1,35 @@
+{
+  "drafts": [
+    {
+      "confirmation_required": false,
+      "draft_id": "DRAFT-001",
+      "material_id": "M01",
+      "original_request": {
+        "allow_alternative": true,
+        "material_id": "M01",
+        "request_id": "REQ-IDEMPOTENCY-001",
+        "requested_time": "18:00",
+        "target_date": "2026-11-12",
+        "time_constraint": "flexible",
+        "user_note": "用于验证重复提交"
+      },
+      "request_hash": "28d9205e64863e6c8e62f77a0229597101ada437e86668505a18723dffa07578",
+      "request_id": "REQ-IDEMPOTENCY-001",
+      "requested_slot": {
+        "date": "2026-11-12",
+        "time": "18:00"
+      },
+      "status": "ready",
+      "suggested_slot": {
+        "date": "2026-11-12",
+        "time": "18:00"
+      }
+    }
+  ],
+  "request_index": {
+    "REQ-IDEMPOTENCY-001": {
+      "draft_id": "DRAFT-001",
+      "request_hash": "28d9205e64863e6c8e62f77a0229597101ada437e86668505a18723dffa07578"
+    }
+  }
+}

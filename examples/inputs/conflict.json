@@ -1,0 +1,9 @@
+{
+  "request_id": "REQ-CONFLICT-001",
+  "material_id": "M01",
+  "target_date": "2026-11-10",
+  "requested_time": "18:00",
+  "time_constraint": "flexible",
+  "allow_alternative": true,
+  "user_note": "如冲突可建议替代时段"
+}
